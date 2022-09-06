@@ -20,15 +20,16 @@
     // element.className = 'container' // 💰 in React, this is also called the "className" prop
     // // This is similar to ReactDOM.createRoot().render()
     // rootElement.append(element)
-    const element = React.createElement('div', {
-      id: 'root',
-      children: [
-        React.createElement('span', null, 'Hello'),
-        ' ',
-        React.createElement('span', null, 'World'),
-      ],
-      className: 'container',
-    })
+    const element = React.createElement(
+      'div',
+      {
+        id: 'root',
+        className: 'container',
+      },
+      React.createElement('span', null, 'Hello'),
+      ' ',
+      React.createElement('span', null, 'World'),
+    )
     ReactDOM.createRoot(rootElement).render(element)
 
     // 🐨 Please re-implement the regular document.createElement code above
